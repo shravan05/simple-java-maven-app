@@ -1,20 +1,20 @@
 pipeline {
     agent {
         kubernetes {
-        label 'shared-agent'
-        defaultContainer: 'main-container'
-        yaml '''
-            apiVersion: v1
-            kind: Pod
-            spec:
-            serviceAccountName: jenkins
-            containers:
-              - name: main-container
-                image: maven
-                command:
-                - cat
-                tty: true
-            '''
+            label 'shared-agent'
+            defaultContainer: 'main-container'
+            yaml '''
+                apiVersion: v1
+                kind: Pod
+                spec:
+                serviceAccountName: jenkins
+                containers:
+                - name: main-container
+                    image: maven
+                    command:
+                    - cat
+                    tty: true
+                '''
         }
     }
     stages {
