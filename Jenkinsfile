@@ -2,7 +2,7 @@ pipeline {
     agent {
         kubernetes {
             label 'shared-agent'
-            defaultContainer: 'main-container'
+            defaultContainer 'main-container'
             yaml '''
                 apiVersion: v1
                 kind: Pod
