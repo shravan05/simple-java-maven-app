@@ -10,10 +10,10 @@ pipeline {
                 serviceAccountName: jenkins
                 containers:
                 - name: main-container
-                    image: maven
-                    command:
-                    - cat
-                    tty: true
+                  image: maven
+                  command:
+                  - cat
+                  tty: true
                 '''
         }
     }
