@@ -6,14 +6,17 @@ pipeline {
             yaml '''
                 apiVersion: v1
                 kind: Pod
+                metadata:
+                  labels:
+                    jenkins: 'shared-agent'
                 spec:
-                serviceAccountName: jenkins
-                containers:
-                - name: main-container
-                  image: maven
-                  command:
-                  - cat
-                  tty: true
+                    serviceAccountName: jenkins
+                    containers:
+                        - name: main-container
+                          image: maven
+                          command:
+                           - cat
+                          tty: true
                 '''
         }
     }
