@@ -25,6 +25,7 @@ pipeline {
             steps {
                 sh 'mvn -B -DskipTests clean package'
                 sh 'echo ${BRANCH_NAME}'
+                sh 'echo ${env.BRANCH_NAME}'
                 sh 'echo ${GIT_BRANCH}'
             }
         }
