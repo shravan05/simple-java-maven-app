@@ -1,6 +1,6 @@
 // Jenkinsfile
 
-@Library('shared-libs') _
+@Library('shared-library') _
 
 deployJavaPipeline {
   app_name = 'my-app'
